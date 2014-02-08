@@ -3,9 +3,6 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-	// find the sum of the even-valued terms in the Fibonacci sequence whose values
-	// do not exceed four million
-
 	int a = 1;
 	int b = 1;
 	int sum = 0;
@@ -20,4 +17,6 @@ int main(int argc, char const *argv[]) {
 	}
 
 	cout << "The sum: " << sum << endl;
+
+	return 0;
 }

@@ -6,21 +6,27 @@ using namespace std;
 bool IsPalindrome(int n);
 
 int main(int argc, char const *argv[]) {
-	int solution;
-	int first = 999;
-	int second = 999;
+	int solution = 0;
+	int a = 999;
+	int b, c;
 
-	if (IsPalindrome(54)) {
-		printf("54 is a palindrome\n");
+	while (a > 0) {
+		b = 999;
+		while (b >= a) {
+			c = a * b;
+			if (IsPalindrome(c)) {
+				if (c > solution) {
+					solution = c;
+				}
+				break;
+			}
+			b--;
+		}
+		a--;
 	}
 
-	if (IsPalindrome(101)) {
-		printf("101 is a palindrome\n");
-	}
-
-	// while (second > 0) {
-
-	// }
+	printf("Final solution is: %i\n", solution);
+	return 0;
 }
 
 bool IsPalindrome(int n) {

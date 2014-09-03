@@ -15,6 +15,14 @@ int main(int argc, char const *argv[]) {
 		a *= num[i + 2] - '0';
 		a *= num[i + 3] - '0';
 		a *= num[i + 4] - '0';
+		a *= num[i + 5] - '0';
+		a *= num[i + 6] - '0';
+		a *= num[i + 7] - '0';
+		a *= num[i + 8] - '0';
+		a *= num[i + 9] - '0';
+		a *= num[i + 10] - '0';
+		a *= num[i + 11] - '0';
+		a *= num[i + 12] - '0';
 
 		if (a > b) {
 			b = a;

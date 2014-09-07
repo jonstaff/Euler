@@ -1,4 +1,4 @@
 Euler
 =====
 
-Project Euler solutions in C++
+Project Euler solutions in C/C++.

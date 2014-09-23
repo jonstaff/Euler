@@ -35,4 +35,5 @@ int AmicableNumbers()
 int main()
 {
   printf("The solution is: %d\n", AmicableNumbers());
+  return 0;
 }

@@ -1,15 +1,9 @@
 #include <stdio.h>
 
-const int kMax = 2000;
-int g_pandigitals[4000000] = {0};
+const int kMaxFactor = 2000;
+const int kMaxProduct = 10000;
 
-void print_array(int array[])
-{
-  for (int i = 0; i < 9; ++i) {
-    printf("%d", array[i]);
-  }
-  printf("\n");
-}
+int g_pandigitals[kMaxProduct] = {0};
 
 int creates_pandigital(int a, int b)
 {
@@ -49,17 +43,14 @@ int main()
 {
   int sum = 0;
   int pan_digit;
-  for (int i = 1; i < kMax; ++i) {
-    for (int j = i; j < kMax; ++j) {
+  for (int i = 1; i < kMaxFactor; ++i) {
+    for (int j = i; j < kMaxFactor; ++j) {
       pan_digit = creates_pandigital(i, j);
       if (pan_digit) g_pandigitals[pan_digit - 1] = pan_digit;
     }
   }
 
-  for (int i = 0; i < 4000000; ++i) {
-    if (g_pandigitals[i]) {
-      printf("%d\n", g_pandigitals[i]);
-    }
+  for (int i = 0; i < kMaxProduct; ++i) {
     sum += g_pandigitals[i];
   }
 

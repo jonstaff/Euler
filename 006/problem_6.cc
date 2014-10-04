@@ -1,16 +1,15 @@
-#include <stdio.h>
+#include <iostream>
 
-using namespace std;
+int main()
+{
+  long a = 0;
+  long b = 0;
 
-int main(int argc, char const *argv[]) {
-	long a = 0;
-	long b = 0;
+  for (int i = 1; i < 101; ++i) {
+    a += i * i;
+    b +=i;
+  }
 
-	for (int i = 1; i < 101; ++i) {
-		a += i * i;
-		b +=i;
-	}
-
-	printf("The solution is: %ld\n", b * b - a);
-	return 0;
+  std::cout << "The solution is: " << b * b - a << "\n";
+  return 0;
 }

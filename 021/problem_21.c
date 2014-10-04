@@ -2,7 +2,7 @@
 
 const int kSize = 10000;
 
-int AmicableNumbers()
+int amicable_numbers()
 {
   int d[kSize] = {};
   for (int i = 1; i < kSize; ++i) {
@@ -34,6 +34,6 @@ int AmicableNumbers()
 
 int main()
 {
-  printf("The solution is: %d\n", AmicableNumbers());
+  printf("The solution is: %d\n", amicable_numbers());
   return 0;
 }

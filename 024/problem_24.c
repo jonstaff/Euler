@@ -94,6 +94,5 @@ int main()
 
   printf("The solution is: ");
   print_array(seq);
-
   return 0;
 }

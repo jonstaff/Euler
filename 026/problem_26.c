@@ -26,6 +26,5 @@ int main()
   }
 
   printf("The solution is: %d\n", answer);
-
   return 0;
 }

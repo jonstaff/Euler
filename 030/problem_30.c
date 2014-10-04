@@ -9,7 +9,6 @@ int power_sum(int a, int b, int c, int d, int e, int f)
     + e * tens[4] + f * tens[5];
 
   if (powers[a] + powers[b] + powers[c] + powers[d] + powers[e] + powers[f] == digits) {
-    printf("digits: %d\n", digits);
     return digits;
   } else {
     return 0;

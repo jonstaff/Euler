@@ -1,14 +1,11 @@
-#include <stdio.h>
+#include <iostream>
 
-int main(int argc, char const *argv[]) {
-  // sum of the digits of the number 2^1000
-
-  int array[1000] = {};
+int main()
+{
+  int array[1000] = {1};
   int count = 1;
   int sum = 0;
   int carry = 0;
-
-  array[0] = 1;
 
   for (int i = 0; i < 1000; ++i) {
     for (int j = 0; j < count; ++j) {
@@ -34,6 +31,6 @@ int main(int argc, char const *argv[]) {
     sum += array[i];
   }
 
-  printf("Sum of the digits: %i\n", sum);
+  std::cout << "The solution is: " << sum << "\n";
   return 0;
 }

@@ -45,6 +45,5 @@ int main()
   }
 
   printf("The solution is: %d\n", product);
-
   return 0;
 }

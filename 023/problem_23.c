@@ -52,6 +52,5 @@ int main()
   }
 
   printf("The solution is: %d\n", sum);
-
   return 0;
 }

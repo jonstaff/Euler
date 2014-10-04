@@ -1,6 +1,7 @@
-#include <stdio.h>
+#include <iostream>
 
-int main(int argc, char const *argv[]) {
+int main()
+{
   int longest = 0;
   int num;
 
@@ -23,6 +24,6 @@ int main(int argc, char const *argv[]) {
     }
   }
 
-  printf("%i produces the longest chain, which is %i\n", num, longest);
+  std::cout << "The solution is: " << longest << "\n";
   return 0;
 }

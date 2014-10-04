@@ -104,18 +104,16 @@ int num_letters(int num)
       break;
   }
 
-  printf("Number is %d, hundreds is %d, tens is %d, ones %d, letters %d\n", num, hundreds, tens, ones, letters);
   return letters;
 }
 
-int main(int argc, char *argv[])
+int main()
 {
-  int i;
   int total = 0;
-
-  for (i = 1; i < 1001; ++i) {
+  for (int i = 1; i < 1001; ++i) {
     total += num_letters(i);
   }
 
-  printf("The answer is: %d\n", total);
+  printf("The solution is: %d\n", total);
+  return 0;
 }

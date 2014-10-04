@@ -13,7 +13,7 @@ const int kDaysInOctober = 31;
 const int kDaysInNovember = 30;
 const int kDaysInDecember = 31;
 
-int CountingSundays()
+int count_sundays()
 {
   int sundays = 0;
   int days = 366; // start days at 1 since Jan. 1, 1900 is Monday; then add 365 for the first year
@@ -112,7 +112,8 @@ int CountingSundays()
   return sundays;
 }
 
-int main(int argc, const char *argv[])
+int main()
 {
-  printf("The solution is: %d\n", CountingSundays());
+  printf("The solution is: %d\n", count_sundays());
+  return 0;
 }

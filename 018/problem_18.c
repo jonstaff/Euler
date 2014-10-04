@@ -2,7 +2,7 @@
 
 const int kTriangleSize = 15;
 
-int data[kTriangleSize][kTriangleSize] = {
+int g_data[kTriangleSize][kTriangleSize] = {
   {75},
   {95, 64},
   {17, 47, 82},
@@ -20,27 +20,24 @@ int data[kTriangleSize][kTriangleSize] = {
   {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23}
 };
 
-int Max(int x, int y)
+int max(int x, int y)
 {
-  if (x > y) {
-    return x;
-  } else {
-    return y;
-  }
+  return x > y ? x : y;
 }
 
-int MaxChild(int i, int j)
+int max_child(int i, int j)
 {
-  if (!data[i][j]) {
+  if (!g_data[i][j]) {
     return 0;
   } else if (i == kTriangleSize - 2) {
-    return data[i][j] + Max(data[i + 1][j], data[i + 1][j + 1]);
+    return g_data[i][j] + max(g_data[i + 1][j], g_data[i + 1][j + 1]);
   } else {
-    return data[i][j] + Max(MaxChild(i + 1, j), MaxChild(i + 1, j + 1));
+    return g_data[i][j] + max(max_child(i + 1, j), max_child(i + 1, j + 1));
   }
 }
 
-int main(int argc, char *argv[])
+int main()
 {
-  printf("The solution is: %d\n", MaxChild(0, 0));
+  printf("The solution is: %d\n", max_child(0, 0));
+  return 0;
 }
